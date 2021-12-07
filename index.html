@@ -30,7 +30,7 @@
 							<li>Proposed Timeline</li>
 						</ul>
 						<aside class="notes">
-							Good afternoon dear committee members! Thank you so much for taking the time to join me today. I guess we all know each other as I have either taken courses or worked on projects with you. However, you might wonder, what Chenglu is doing everyday?! So the purpose of today's meeting is to let you get to know me better. Specifically, I will go through my background, both educational and professional background.
+							Good afternoon dear committee members! Thank you so much for taking the time to join me today. I guess we all know each other as I have either taken courses or worked on projects with you. However, you might wonder, what Chenglu is doing everyday?! So the purpose of today's meeting is to introduce myself a bit more. Specifically, I will go through my background, both educational and professional background.
 						</aside>
 					</section>
 					<section data-auto-animate>
@@ -97,7 +97,7 @@
 						<h3>Background</h3>
 					</section>
 					<section data-auto-animate>
-						<aside class='notes'>I double majored in Business Vietnamese and Finance for my undergraduate study. I hated Finance but now I am glad I took it because the maths training allows me to teach myself how to program, and how to conduct data analysis. I was very close to get a master degree in data science. As you might know, I transferred to UF from UT Austin, where I was taking a concurrent master's degree in data science. I have three more courses and a report to graduate, but I did not finish them since I transferred.</aside>
+						<aside class='notes'>I double majored in Business Vietnamese and Finance for my undergraduate study. I hated Finance but now I am glad I took it because the maths training allows me to teach myself how to program, and how to conduct data analysis. I was very close to get a master degree in data science. As you might know, I transferred to UF from UT Austin, where I was taking a concurrent master's degree in data science. I had two more courses and a report to graduate, but I did not finish them since I transferred.</aside>
 						<h3>Background</h3>
 						<ul>
 							<li>
@@ -144,7 +144,7 @@
 
 					<section data-auto-animate>
 						<aside class="notes">
-							I have got credits for all the foundational courses in ed-tech. For research methods course, I have taken a quantitative foundation at UF. But I have not taken a qualitative one. Although I took one back to UT, I felt it might be a good idea for me to take another one as I did not realize how important and insightful qualitative research was.
+							I have got credits for all the foundational courses in ed-tech. For research methods course, I have take a variety of courses, most are quantitative. I did take a quanlitative research course, but I felt it might be a good idea for me to take another one as I did not realize how important and insightful qualitative research could be.
 						</aside>
 						<h3>Course Progress</h3>
 						<ul>
@@ -178,21 +178,31 @@
 					<section data-auto-animate>
 						<h3>Research Experience</h3>
 						<aside class="notes">
-							As you might see in the earlier fancy animation where the word fair learning analytics was highlighted, my major research interest resides in exploring & examining methods to enhance the fairness of LA. Why? Because LA uses lots of machine learning algorithms, and machine learning models can be biased. We definitely do not want the existing social biases reflected in our LA models. Imagine how students will feel if a prediction model fails a student simply because the student has a dark skin. Biased LA can lead to trustworthy issues between LA and students. When people don't trust your algorithm, it is hard to fulfill the purpose of LA, which is to support teaching and learning. However, Little is known whether LA applications in education are Fair.
+							As you might see in the earlier fancy animation where the word fair learning analytics was highlighted, my major research interest resides in exploring & examining methods to enhance the fairness of LA. Why? Because LA uses lots of machine learning algorithms, and machine learning models can be biased. We definitely do not want the existing social biases reflected in our LA models. Imagine how students will feel if a prediction model fails a student simply because the student has a dark skin. Biased LA can lead to trustworthy issues between LA and students. When people don't trust your algorithm, it is hard to fulfill the purpose of LA, which is to support teaching and learning. However, while fairness issue in LA sounds important, little is known whether LA applications in education are Fair.
+
+							So what can we do? There are two entities we might wanna consider. The first is algorithm. There are different ways that we can apply to LA algorithms in order to make them fairer. Specifically, we have data preprocessing, which is to transform and analyze data such that we can mitigate the bias embedded in data, and data bias is an important source of bias in algorithms. Second, we can do algorithm modification, which is also called in-processing. Usually, we would modify the loss function of algorithms to let the algorithms learn what is fair and biased. Finally, we have result post-processing, which is to change model predictions such that the results are fair according to certain metrics. In our studies, we have mainly examined the in-processing technique, as preprocessed can be hard to interpret and post-processing is modifying predictions directly. However, we do plan to look into preprocessing and postprocessing in the future to understand their affordances.
+
+							Another entity we want to understand better is individuals. The fairness discussed in algorithms is measured with some quantitative metrics, and to be honest, that is the easy part. What about students' perceived fairness? So after all the work we have done to improve algorithmic fairness, does it even matter? Will students actually perceive the algorithms as fair after seeing some seemingly fair numbers? To understand this, we have also done an randomized experiment to examine factors that influence students' perceived fairness.
 						</aside>
 						<div class="container">
-							<h4>Fair LA Background</h4>
+							<h4>Fair LA/AI Background</h4>
 							<div class="r-stack">
 								<img class="fragment fade-out" data-fragment-index="0" style="max-width: 80%;" src="assets/fair_intro.png" alt="">
 								<div class="fragment fade-in" data-fragment-index="0" style="width: 100%; display: flex; align-items: center; justify-content: space-between;">
 									<ul style="margin-left: 0;">
 										So...what can we do?
 										<ul>
-											<ul>
-												<li>Pre-processing</li>
-												<li>In-processing</li>
-												<li>Post-processing</li>
-											</ul>
+											<li>
+												Algorithms												
+												<ul>
+													<li>Pre-processing</li>
+													<li>In-processing</li>
+													<li>Post-processing</li>
+												</ul>
+											</li>
+											<li>
+												Individuals
+											</li>
 										</ul>
 									</ul>
 
@@ -203,15 +213,15 @@
 
 						<div class="container font-12">
 							<p class="v-margin-small">
-								Image extracted from https://www.tensorflow.org/responsible_ai
+								Image retrieved from https://www.tensorflow.org/responsible_ai
 							</p>
 						</div>
 					</section>
 
 					<section>
-						<h3>Research Experience: Fair LA</h3>
+						<h3>Research Experience: Fair LA/AI</h3>
 						<aside class="notes">							
-							In this study, we have proposed a fair logistic regression algorithm, following a framework called Seldonian framework. Conceptually, what fair logistic regression does is to allow researchers to define fairness constraints. There are several metrics we can adopt to quantify fairness. In general, these metrics measure how well separated predictions are among different memberships. For example, if Asian students receive more correct predictions simply because of their race, then it is not fair. So the fairness constraints in fair logistic regression allows us to define a minimum value for those fairness metrics. This way, the model will learn to make fairer predictions.  
+							In this study, we have proposed a fair logistic regression algorithm, following a framework called Seldonian. The goal is to build a prediction model that can fairly predict students' pass/faill of future assessments based on their current learning status. Teachers can utilize this predictive tool to provide early intervention and students can make use of it for their learning goal setting. Conceptually, what fair logistic regression does is to allow researchers to define fairness constraints. There are several metrics we can adopt to quantify fairness. In general, these metrics measure how well separated predictions are among different memberships. For example, if Asian students receive more correct predictions simply because of their race, then it is not fair. So the fairness constraints in fair logistic regression allows us to define a minimum value for those fairness metrics. This way, the model will learn to make fairer predictions. Our results did show that fair logistic regression could generate fairer predictions while achieving comparable prediction accuracies.
 						</aside>
 						<div class="container">
 							<h4>Project 1: Fair Prediction</h4>
@@ -229,7 +239,15 @@
 					</section>
 
 					<section>
-						<h3>Research Experience: Fair LA</h3>
+						<aside class="notes">							
+							Another algorithm modification study we have done is fair peer recommender. Hope you would agree with me that online discussion forums can be a helpful tool for students' learning as students will exchange, argue, and assimilate ideas through their interactions. However, online discussion forums are plagued with a low interaction level, especially for large-scale platforms such as MOOCs. One reason might be that students are overwhelmed with the large quantity of posts and threads, and don't know where to look at. Meanwhile, even if they want to communicate with their peers, they might see it challenging to find those who want to connect with them. So peer recommender seems to be promising for this issue. A peer recommender in education is a system to provide students personalized social outreach to help expand their social networks and potentially assist with their learning.
+
+							So the aim of this study is to build a peer recommender that can fairly connect students who are likely to interact. But what does fair have to do with this case? As shown in the figure, which is the social network graphs of how students interacted with each other. We can see that there are students forming communities that are not inclusive enough, where students mainly talk to peers of the same race or gender. This is understandable, as students tend to communicate with peers from the same school, and schools might have different demographic distributions. However, peer recommenders could learn to emphasize students' group membership if we do not handle it specifically. 
+							
+							But...wait a sec...what are the benefits of having inclusive communications? I want to first clarify that the proposed peer recommender is not limited to race and gender but can also promote inclusive and diverse peer interactions based on factors such as nationalities, languages, and individual differences, any categorical variables. Studies have shown that students could benefit from interacting with peers of various backgrounds in terms of increasing knowledge exchange, triggering reciprocal and sustainable relationships, and enhancing learning engagement. Such interactions provide students an opportunity to critically explore their own views, respond to different and challenging views of peers, and negotiate mutual understandings. Our preliminary results have shown that the proposed fair peer recommender is able to amplify students' different voices in online learning.
+						</aside>
+
+						<h3>Research Experience: Fair LA/AI</h3>
 
 						<div class="container">
 							<h4>Project 2: Fair Peer Recommender</h4>
@@ -250,7 +268,14 @@
 					</section>
 
 					<section>
-						<h3>Research Experience: Fair LA</h3>
+						<aside class="notes">
+							Alright, that's so much about algorithmic fairness. Now let's take a look at perceived fairness. For students' perceived fairness, we have developed a web platform that will assign a bunch of random manipulations to users. The manipulations include algorithm transparency (public or not), design & development (CS, EDU, Both), Endorsement (teachers, students, theory), decision-making (algorithm only, mixed), algorithm bias (whether the algorithm is biased or not. students will see three tables regarding the algorithm's error rates of different race, gender, and age), and finally prediction (whether students will pass or fail, which is also randomly assigned). The platform is contextualized with an AI algorithm designed to predict students' pass/fail status before they take an advanced algebra course in colleges. Participants will receive a random prediction based on their self-report information and they will then report their perceived fairness. We collected their demographics, maths anxiety, maths knowledge, and perceived fairness. We also collected their eye tracking data and mouse movement throughout the experiment. Maths anxiety and perceived fairness were adapted from validated scales, both of them have achieved a good reliability in our study using cronbach's alpha. Maths knowledge scale was 5 algebra questions from NCTM (national council of teachers of maths) and Algebra Nation, ranging from pre algebra to algebra 1. 
+							
+							We have used Amazon's MTurk platform to recruit 400 participants, with the requirement that participants are between 18-25 years old and with a US bachelor degree. Because we are interested in understanding students' perceived fairness in higher education. 400 participants were recruited because the power analysis showed that we need 350ish participants to find significance, if the effect size is small and we wanna have a power of 95%.
+
+							Sounds exciting! So what are the results? Well, I have to admit that we just finished data collection, and I have only done some preliminary analysis. The first thing is algorithm transparency matters, students tend to have lower perceived fairness when they receive the low algorithm transparency manipulation. We did not see significance for other manipulation variables when they are examined standalone. This is interesting as we can see from the eyetracking figure on the left that students did take a look at those descriptions for the manipulations. By the way, the right figure is the visualization of mouse hovering trace. However, we do find significance for interaction terms between manipulations. For example, the interaction between algorithm bias and theory-endorsement is significant, suggesting the effect of algorithm bias on students' perceived fariness depends on whether the algorithm is theory-driven. Another interesting thing is that whether students receive a favorable or unfavorable prediction does not influence their preceived fairness. Favorable means students receive a pass and unfavorable means fail. This is different from some prior studies that I have read, where favorability was an important predictor in those studies. It could be because the context in our experiment is more cognitively challenging, which can affect the role of favorability. All right, I talk too much. Let's move on.
+						</aside>
+						<h3>Research Experience: Fair LA/AI</h3>
 
 						<div class="container">
 							<h5>Project 3: Factors influencing students' perceived fairness</h5>
@@ -269,6 +294,9 @@
 					</section>
 
 					<section data-auto-animate>
+						<aside class="notes">
+							Another research direction I am interested in is using technologies to support STEM education. We are living in a world of big data nowadays. The digitalization of education also embraces and expedites the use of big data to support teaching and learning. From LMS such as Canvas, Blackboard, to MOOC platforms, researchers have now had access to an unprecedented amount of data such as discussion posts and clickstreams. This big amount of data enables researchers to explore statistical, machine learning, and deep learning models to support teaching and learning automatically. We have seen great works of learning analytics using trace data to automatically predict students’ engagement, dropout status, and learning outcomes. These works show that it is possible to support students’ learning at a large scale. For me, I am specifically interested in using artificial intelligence to build conversational agents to support students. Because I feel that the dependence on instructional staff to engage students in online learning might not be sustainable, as it is challenging for them to process a large quantity of requests from students
+						</aside>
 						<h6>Research Exp: Technology-enhanced STEM Ed</h6>
 
 						<div class="container">
@@ -279,6 +307,12 @@
 					</section>
 
 					<section data-auto-animate>
+						<aside class="notes">
+							So what is a conversational agent? A conversational agent is often used interchangeably with a chatbot, which is defined as human-developed software powered by natural language processing techniques (NLP) to spontaneously respond to human languages. There are mainly two distinct ways of constructing CA, a rule-based agent that requires manual engineering with classical NLP methods and another using artificial intelligence (AI) to generate responses with automatic data-driven inferences. Studies have shown that both ways, if appropriately constructed, can meaningfully support students. However, I am more interested in AI-based conversational agents, because responses of rule-based conversational agents can suffer from input patterns coupling, topics limitations, and wording repetitiveness, which can be unwieldy in large-scale online learning courses and can potentially compromise students’ user and learning experience.
+
+							So in this study, we have examined the coherence, readability, social support from AI-based conversational agents. We also did a small-scale survey with real users to understand how human-like and supportive the texts generated by conversational agents can be. Specifically, participants will rate 10 sentences randomly drawn from our bank, 5 of which were from real humans, and the other 5 were machine-generated. The results showed that participants could not differentiate machine-generated texts from those of humans. Moreover, sometimes machine-generated texts were perceived to provide more support than humans.
+						</aside>
+
 						<h6>Research Exp: Technology-enhanced STEM Ed</h6>
 
 						<div class="container">
@@ -295,12 +329,23 @@
 								<strong>Li, C.</strong> & Xing, W. (2021). Natural Language Generation Using Deep Learning to Support MOOC Learners. <em>International Journal of Artificial Intelligence in Education, 31</em>, 186-214. <a href="">https://doi.org/10.1007/s40593-020-00235-x</a>.
 							</p>
 							<p class="v-margin-small">
-								<strong>Li, C.</strong> & Xing, W. (manuscript writing). Building Socially Responsible Conversational Agents Using Big Data to Support Online Algebra Learning.
+								<strong>Li, C.</strong>, Xing, W., & Leite, W. (manuscript writing). Building Socially Responsible Conversational Agents Using Big Data to Support Online Algebra Learning.
 							</p>
 						</div>
 					</section>
 
 					<section data-auto-animate>
+						<aside class="notes">
+							This is great, until we realized that supportive texts of conversational agents do not necessarily suggest safety. Safety is operationalized as the evaluation of content appropriateness (e.g., offensiveness) in generated texts. Whether an unsafe response is supportive or not can subject to individual, contextual, and cultural differences. For example, for a biased person with racism or sexism tendency, a biased response can be socio-emotionally supportive. However, for students who appreciate and accept the common values taught in schools, such unsafe responses can disengage and demotivate their learning. To mitigate this isse, we have come up with a conceptual framework and aim to examine strategies that can enhance the safety of conversational agents.
+
+							Specifically, we categorized safety issues into Instigator, yea-sayer, and imposter effects, following the framework of Dinan et al. Instigator effect describes the initiation of offensive content by conversational agents. Offensiveness includes but is not limited to sensitive, toxic, hatred, abusive, and bullying content. Yea-sayer effect refers to the responses of CAs that explicitly or implicitly agrees with offensive content from humans, which can fan the flame and lead to severe consequences such as violence and crimes. Finally, imposter effect is the provision of incorrect or inappropriate advice in critical scenarios such as medical advice seeking, self-harming, and emergency contexts.
+
+							In this study, we asked the research questions:
+							
+							What strategies can we adopt to enhance the discourse safety of CA? Specifically, we evaluated the effectiveness of strategies explored in this study from the perspective of instigator, yea-sayer, and imposter effects.
+							
+							What is the relationship between discourse safety and social support level? We hypothesized that there is no such a relationship and correlational tests among the two would not yield any significance.
+						</aside>
 						<h6>Research Exp: Technology-enhanced STEM Ed</h6>
 
 						<div class="container">
@@ -316,47 +361,57 @@
 								<strong>Li, C.</strong> & Xing, W. (2021). Natural Language Generation Using Deep Learning to Support MOOC Learners. <em>International Journal of Artificial Intelligence in Education, 31</em>, 186-214. <a href="">https://doi.org/10.1007/s40593-020-00235-x</a>.
 							</p>
 							<p class="v-margin-small">
-								<strong>Li, C.</strong> & Xing, W. (manuscript writing). Building Socially Responsible Conversational Agents Using Big Data to Support Online Algebra Learning.
+								<strong>Li, C.</strong>, Xing, W., & Leite, W. (manuscript writing). Building Socially Responsible Conversational Agents Using Big Data to Support Online Algebra Learning.
 							</p>
 						</div>
 					</section>
 
 					<section data-auto-animate>
-						<h6>Research Exp: Technology-enhanced STEM Ed</h6>
+						<aside class="notes">
+							Finally, here is an example project that I was leading. So Telelab is a cloud based lab to support students' learning in chemistry and physics. We call Telelab a remote lab 2.0, because just like the major difference between web 1.0 and 2.0 is user-generated content. Remote lab 2.0 allows students to be a tictoker doing science. We allowed users to not only create their own experiments, but also allow them to stream their works in real time. We have conducted several studies, investigating students' engagement and leraning gains on high school chemistry. Through trace data analysis and pre- post-tests, we found that Telelab could effectively engage students and significantly contribute to students' learning.
+						</aside>
 
+						<h6>Research Exp: Technology-enhanced STEM Ed</h6>
 						<div class="container">
 							<h5>Design & Development Example: Telelab</h5>
 						</div>
-
-						<aside class="notes">
-							Here is an example project that I was leading. So Telelab is a cloud based lab to support students' learning in chemistry and physics. We call Telelab a remote lab 2.0, because just like the major difference between web 1.0 and 2.0 is user-generated content. Remote lab 2.0 allows students to be a tictoker doing science. We allowed users to not only create their own experiments, but also allow them to stream their works in real time. We have conducted several studies, investigating students' engagement and leraning gains on high school chemistry. Through trace data analysis and pre- post-tests, we found that Telelab could effectively engage students and significantly contribute to students' learning.
-						</aside>
-
-						<div class='r-stack'>
-							<img style="max-width: 60%;" src="assets/telelab-chemistry.png" alt="">
-							<img style="max-width: 60%;" class='fragment' src="assets/telelab-chatroom.png" alt="">
-							<img style="max-width: 60%;" class='fragment' src="assets/telelab-remote-control-thermography.png" alt="">
+						<div class='horizontal-grid'>
+							<img class='col-4' src="assets/telelab-chemistry.png" alt="">
+							<img class='col-4' src="assets/telelab-chatroom.png" alt="">
+							<img class='col-4' src="assets/telelab-remote-control-thermography.png" alt="">
 						</div>
 					</section>
 				</section>
 
 				<section>
+					<aside class="notes">
+						Heww...That was a lot. Hope you are not bored. Here are the top-three key words for my research interests, which are fair learning analytics/artificial intelligence, big data, and conversational agents.
+					</aside>
 					<h3>Research Interest Key Words</h3>
 					<ul>
-						<li>Fair Learning Analytics</li>
-						<li>Artificial Intelligence</li>
+						<li>Fair Learning Analytics/Artificial Intelligence</li>
 						<li>Big Data</li>
 						<li>Conversational Agents</li>
 					</ul>
 				</section>
 
 				<section>
+					<aside class="notes">
+						Finally, my proposed timeline. I intend to take the qualifying exam in the coming januaray. Hopefully I will pass, finger crossed. After that, I hope to finish my prospectus by the summer of 2022, and proceed to proposal writing. I hope that I can defend the proposal by the end of fall, 2022.
+					</aside>
 					<h3>Proposed Timeline</h3>
 					<ul>
-						<li>Jan, 2022: Qualification Exam</li>
+						<li>Jan, 2022: Qualifying Exam</li>
 						<li>Spring/Summer, 2022: Prospectus</li>
 						<li>Fall, 2022: Proposal defense</li>
 					</ul>
+				</section>
+
+				<section>
+					<aside class="notes">
+						Alright, that's it! Thank you!
+					</aside>
+					<h3>Thank you!</h3>
 				</section>
 			</div>
 		</div>
