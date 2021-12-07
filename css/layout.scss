@@ -87,10 +87,14 @@
   justify-content: flex-end;
 }
 
+.indent {
+  margin: 3rem !important;
+}
+
 .container {
 	display: flex;
 	flex-direction: column;
-	text-align: left;
+  text-align: left;
 }
 
 .v-margin-small {
